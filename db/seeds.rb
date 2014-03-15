@@ -28,3 +28,27 @@ Product.create(title: 'Breed Love Guitar',
 			   	image_url:'breedlove.jpg',
 			   	price:545.00	
 	)
+
+Product.create(
+				title: "Keilwerth Saxophone",
+				description: 
+					%{
+						<p>
+							The <strong>Julius Keilwerth</strong> company is a German saxophone manufacturer, established in 1925.
+						</p>
+					},
+				image_url: 'keilwerth.jpg',
+				price:5000.00
+	)
+
+
+
+
+
+
+
+
+
+
+
+
