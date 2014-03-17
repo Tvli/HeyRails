@@ -65,8 +65,11 @@ test "product is not valid without a unique title" do
 							image_url: "fred.gif"
 						)
 	assert product.invalid?
-	assert_equal [I18n.translate('errors.message.taken')],
-					product.errors[:title]
+	# assert_equal [I18n.translate('errors.message.taken')],
+	# 				product.errors[:title]
+
+  assert_equal [I18n.translate('activerecord.errors.messages.taken')],
+          product.errors[:title].join('; ')
 end
 
 
@@ -74,11 +77,5 @@ end
 
 
 
-
-
-
-
-
-  
 
 end
