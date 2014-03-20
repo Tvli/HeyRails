@@ -27,20 +27,37 @@ class LineItemsController < ApplicationController
 
   # POST /line_items
   # POST /line_items.json
-  def create
-    product = Product.find(params[:product_id])
-    @line_item = @cart.line_items.build(product: product)
-    # @line_item = LineItem.new(line_item_params)
+  # def create
+  #   product = Product.find(params[:product_id])
+  #   @line_item = @cart.add_product(product.id)
+  #   # @line_item = @cart.line_items.build(product: product)
+  #   # @line_item = LineItem.new(line_item_params)
+  #   respond_to do |format|
+  #     if @line_item.save
+  #       session[:counter] = 0
+  #       format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
+  #       format.json { render action: 'show', status: :created, location: @line_item }
+  #     else
+  #       format.html { render action: 'new' }
+  #       format.json { render json: @line_item.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
+
+    def create
+    product = Product.find(params[:product_id])
+    @line_item = @cart.add_product(product.id)
 
     respond_to do |format|
       if @line_item.save
-        session[:counter] = 0
-        format.html { redirect_to @line_item.cart, notice: 'Line item was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @line_item }
+        format.html { redirect_to @line_item.cart }
+        format.json { render action: 'show',
+          status: :created, location: @line_item }
       else
         format.html { render action: 'new' }
-        format.json { render json: @line_item.errors, status: :unprocessable_entity }
+        format.json { render json: @line_item.errors,
+          status: :unprocessable_entity }
       end
     end
   end
@@ -77,6 +94,6 @@ class LineItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def line_item_params
-      params.require(:line_item).permit(:product_id, :cart_id)
+      params.require(:line_item).permit(:product_id)
     end
 end

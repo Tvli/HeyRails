@@ -41,6 +41,26 @@ Product.create(
 				price:5000.00
 	)
 
+Product.create(
+				title: "AK-47",
+				description:
+					%{
+						<p>It's so amazing that appeared in my childhood within a virtual computing world.</p>
+					},
+				image_url: 'gun.jpg',
+				price: 450.00
+	)
+
+Product.create(
+				title: "Python programming language",
+				description: 
+				%{
+					<p>Pretty good for agile development. Multi-inheritance is powerful feature.</p>
+				},
+				image_url: 'python.png',
+				price: 30.00
+	)
+
 
 
 
