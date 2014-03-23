@@ -54,6 +54,26 @@
 		/*background: #141;*/
 		background-color: #006363;
 
+		form, div{
+			display: inline;
+		}
+
+		input{
+			font-size: small;
+		}
+
+		#cart{
+			font-size: smaller;
+			color:#ff7400;
+
+			table{
+				border-top:  1px dotted #ff7400;
+				border-bottom: 1px dotted #ff7400;
+				margin-bottom: 10px;
+			}
+		}
+
+
 			p{
 				font-size: 15px;
 				color: #ff9240;
