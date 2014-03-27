@@ -27,6 +27,8 @@ class LineItemsController < ApplicationController
 
   # POST /line_items
   # POST /line_items.json
+
+  
   # def create
   #   product = Product.find(params[:product_id])
   #   @line_item = @cart.add_product(product.id)
@@ -88,6 +90,8 @@ class LineItemsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

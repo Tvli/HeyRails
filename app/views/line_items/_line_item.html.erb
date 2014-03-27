@@ -13,6 +13,7 @@
 
 
 <tr>
-	<td colspan="2">&nbsp;</td>
+	<td colspan="1">&nbsp;</td>
+	<td><%= button_to 'Decrease', line_item, method: :decrease, class: 'button' %></td>
 	<td><%= button_to 'Delete', line_item, method: :delete, data: {confirm: "Are you sure?"}, class: 'button' %></td>
 </tr>
