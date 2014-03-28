@@ -87,7 +87,6 @@ class LineItemsController < ApplicationController
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to store_url(session[:cart_id]), notice: 'Item was successfully removed.'}
-      format.js 
       format.json { head :no_content }
     end
   end

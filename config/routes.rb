@@ -8,7 +8,7 @@ Depot::Application.routes.draw do
 
   resources :line_items do 
     put 'decrement', on: :member
-    delete 'destroy', on: :member
+
   end
 
 
