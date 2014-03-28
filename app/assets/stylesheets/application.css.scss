@@ -24,7 +24,7 @@
  	background: #006363;
  	padding: 10px;
  	border-bottom: 2px solid;
- 	font: small-caps 40px/40px "Times New Roman", serif;
+ 	font: small-caps 40px/40px "Comic Sans MS", cursive, sans-serif;
  	/*color: #282;*/
  	color: #ff7400;
  	text-align: center;
@@ -41,7 +41,7 @@
 	padding: 1em;
 	margin-bottom: 2em;
 	background-color: #f0f0f0;
-	font: bold smaller sans-serif;
+	font: bold smaller "Comic Sans MS", cursive, sans-serif;
 }
 
 #columns{
@@ -110,7 +110,7 @@
 		legend{
 			color: #ff7400;
 			background: #006363;
-			font-family: sans-serif;
+			font-family: "Comic Sans MS", cursive, sans-serif;
 			padding: 0.2em 1em;
 		}
 	}
@@ -126,11 +126,9 @@
 
 		}
 
-		
-		.submit{
-			margin-left: 10em;
-			background-color: #006363;
 
+		.actions{
+			margin-left: 5em;
 		}
 	
 		select, textarea, input{
