@@ -13,6 +13,12 @@
  *= require_tree .
  */
 
+ body{
+ 	background-image: url('background.jpg');
+ 	background-repeat: no-repeat;
+ 	background-size: 100% 150%;
+ }
+
  #banner{
  	/*background: #9c9;*/
  	background: #006363;
@@ -94,3 +100,65 @@
 		}
 	}
 }
+
+
+
+.depot_form{
+	fieldset{
+		background: #efe;
+
+		legend{
+			color: #ff7400;
+			background: #006363;
+			font-family: sans-serif;
+			padding: 0.2em 1em;
+		}
+	}
+
+	form{
+		label{
+			width: 5em;
+			float: left;
+			text-align: left;
+			padding-top: 0.2em;
+			margin-right: 0.1em;
+			display: block;
+
+		}
+
+		
+		.submit{
+			margin-left: 10em;
+			background-color: #006363;
+
+		}
+	
+		select, textarea, input{
+			margin-left: 0.5em;
+
+		}
+	
+		
+	
+		br{
+			display: none
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
