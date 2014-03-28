@@ -1,6 +1,6 @@
 class LineItemsController < ApplicationController
   include CurrentCart
-  before_action :set_cart, only: [:create]
+  before_action :set_cart, only: [:create, :decrement]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -87,10 +87,30 @@ class LineItemsController < ApplicationController
     @line_item.destroy
     respond_to do |format|
       format.html { redirect_to store_url(session[:cart_id]), notice: 'Item was successfully removed.'}
+      format.js 
       format.json { head :no_content }
     end
   end
 
+ def decrement
+  # Whit the code below will cause bug
+  #Cannot figure out the reason
+   # @cart = current_cart
+
+   @line_item = @cart.decrement_line_item_quantity(params[:id])
+   respond_to do |format|
+    if @line_item.save
+      format.html { redirect_to store_path, notice: 'Line item was successfully decreased.'}
+      format.js { @current_item = @line_item }
+      format.json { head :ok }
+    else
+      format.html { render action: "edit" }
+      format.js { @current_item = @line_item }
+      format.json { render json: @line_item.errors, status: :unprocessable_entity }
+      
+    end
+  end
+ end
 
 
   private
