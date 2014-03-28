@@ -61,6 +61,7 @@
 		/*background: #141;*/
 		background-color: #006363;
 
+
 		form, div{
 			display:block;
 		}
@@ -82,19 +83,20 @@
 
 
 			p{
-				font-size: 15px;
+				font-size: 20px;
 				color: #ff9240;
 			}
 
 			ul{
-			padding: 0;
+			padding: 1px;
 	
 			li{
 				list-style: none;
+				margin-bottom: 2px;
 	
 				a{
 					color: #ff7400;
-					font-size: small;
+					font-size: medium;
 				}
 			}
 		}
