@@ -20,6 +20,7 @@
 
 	.list_description{
 		width: 60%;
+		font-size: medium;
 
 		dl{
 			margin: 0;
@@ -36,9 +37,9 @@
 
 
 		.list_actions{
-			font-size: x-small;
+			font-size: small;
 			text-align: right;
-			padding-left: lem;
+			padding-left:1em;
 		}
 
 		.list_line_even{
@@ -46,7 +47,7 @@
 		}
 
 		.list_line_odd{
-			background: #f8b0f8;
+			background: #ffb273;
 		}
 }
 
