@@ -62,7 +62,7 @@ test "product is not valid without a unique title" do
 							title: products(:ruby).title,
 							description: "yyy",
 							price: 1,
-							image_url: "fred.gif"
+							image_url: "ruby.png"
 						)
 	assert product.invalid?
 	# assert_equal [I18n.translate('errors.message.taken')],
