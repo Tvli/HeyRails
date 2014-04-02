@@ -20,8 +20,24 @@
 				<li><a href="http://www.../faq">Questions</a></li>
 				<li><a href="http://www.../news">News</a></li>
 				<li><a href="http://www.../contact">Contact</a></li>
-				<li><a href="http://localhost:3000/products">Super Administrator</a></li>
+				
 			</ul>
+
+			<ul>
+				<li><%= link_to 'Super Administrator Login', admin_path %></li>
+			</ul>
+
+			<% if session[:user_id] %>
+				<ul>
+					<li><%= link_to 'View Orders', orders_path %></li>
+					<li><%= link_to 'Manage Products', products_path %></li>
+					<li><%= link_to 'View Users', users_path %></li>
+				</ul>
+
+				<ul>
+					<li><%= button_to 'Logout', logout_path, method: :delete, class: 'button' %></li>
+				</ul>
+			<% end %>
 
 			<div id="cart">
 			<% if @cart %>
