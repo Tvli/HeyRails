@@ -10,19 +10,29 @@ Depot::Application.routes.draw do
   # get "sessions/destroy"
   resources :users
 
-  resources :orders
+  
 
-  resources :carts
+  
 
   get "store/index"
   resources :products do
     get :who_bought, on: :member
   end
 
-  resources :line_items do 
-    put 'decrement', on: :member
+  scope '(:locale)' do
+    resources :orders
+    resources :carts
+
+    resources :line_items do 
+      put 'decrement', on: :member
+    end
+
+    root 'store#index', as: 'store', via: :all
 
   end
+
+
+  
 
 
 
@@ -31,7 +41,7 @@ Depot::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'store#index', as: 'store'
+  
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
