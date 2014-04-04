@@ -8,34 +8,40 @@
 </head>
 <body class="<%= controller.controller_name %>">
 	<div id="banner">
+	<%= form_tag store_path, class: 'locale' do %>
+		<%= select_tag 'set_locale', options_for_select(LANGUAGES, I18n.locale.to_s), onchange: 'this.form.submit()' %>
+		<%= submit_tag 'submit' %>
+		<%= javascript_tag "$('.locale input').hide()" %>
+	<% end %>
+
 		<%= image_tag("logoMe.jpg") %>
-		<%= @page_title || "Shopping With Me!" %>
+		<%= @page_title || t('.title') %>
 	</div>
 
 	<div id="columns">
 		<div id="side">
 		<p><%= Time.now.getgm %></p>
 			<ul>
-				<li><a href="http://localhost:3000">Home</a></li>
-				<li><a href="http://www.../faq">Questions</a></li>
-				<li><a href="http://www.../news">News</a></li>
-				<li><a href="http://www.../contact">Contact</a></li>
+				<li><%= link_to t('.home'), store_path %></li>
+				<li><a href="http://www.../faq"><%= t('.questions') %></a></li>
+				<li><a href="http://www.../news"><%= t('.news') %></a></li>
+				<li><a href="http://www.../contact"><%= t('.contact') %></a></li>
 				
 			</ul>
 
 			<ul>
-				<li><%= link_to 'Super Administrator Login', admin_path %></li>
+				<li><%= link_to t('.adminLogin'), admin_path %></li>
 			</ul>
 
 			<% if session[:user_id] %>
 				<ul>
-					<li><%= link_to 'View Orders', orders_path %></li>
-					<li><%= link_to 'Manage Products', products_path %></li>
-					<li><%= link_to 'View Users', users_path %></li>
+					<li><%= link_to t('.viweOrders'), orders_path %></li>
+					<li><%= link_to t('.manageProducts'), products_path %></li>
+					<li><%= link_to t('.viewUsers'), users_path %></li>
 				</ul>
 
 				<ul>
-					<li><%= button_to 'Logout', logout_path, method: :delete, class: 'button' %></li>
+					<li><%= button_to t('.logOut'), logout_path, method: :delete, class: 'button' %></li>
 				</ul>
 			<% end %>
 

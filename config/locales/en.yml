@@ -19,5 +19,89 @@
 # To learn more, please read the Rails Internationalization guide
 # available at http://guides.rubyonrails.org/i18n.html.
 
+
 en:
-  hello: "Hello world"
+
+
+  number:
+    currency:
+      format:
+        unit:      "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format:    "%u%n"
+#END:currency
+
+#START:errors
+  errors:
+    template:
+      body:        "There were problems with the following fields:"
+      header:       
+        one:       "1 error prohibited this %{model} from being saved"
+        other:     "%{count} errors prohibited this %{model} from being saved"
+#END:errors
+
+
+  layouts:
+    application:
+      title:       		"Shopping With Me"
+      home:        		"Home"
+      questions:   		"Questions"
+      news:        		"News"
+      contact:     		"Contact"
+      adminLogin:  		"Super Administrator Login"
+      viweOrders:  		'View Orders'
+      manageProducts: 	"Manage Products"
+      viewUsers: 		"View Users"
+      logOut: 			"Logout"
+
+
+
+  carts:
+    cart:
+      title:       "Your Cart"
+      empty:       "Empty cart"
+      checkout:    "Checkout"
+      cancleOrder: "Cancle Order"
+      totalPrice:  "Total"
+
+
+
+
+  line_items:
+    line_item:
+      decrease:    "decrease"
+      delete:      "delete"  	 
+
+  sessions:
+    new:
+      name:   		 "Name:"
+      password:      "Password:" 
+      login:		 "Login"
+      pleaseLogin:   "Please Log In"
+
+
+  store:
+    index:
+      title_html:  "Your Shopping Catalog"
+      add_html:    "Add to Cart"
+      viewed: 	   "Viewed"
+      times:	   "time"
+
+
+
+  orders:
+    new:
+      legend:       "Please Enter Your Details"
+    form:
+      name:         "Name"
+      address_html: "Address"
+      email:        "E-mail"
+      pay_type:     "Pay with"
+      pay_prompt_html: "Select a payment method"
+      submit:       "Place Order"
+
+
+
+  thanks:          "Thank you for your order"

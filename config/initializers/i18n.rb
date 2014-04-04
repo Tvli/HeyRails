@@ -3,5 +3,5 @@ I18n.default_locale = :en
 
 LANGUAGES = [
 	['English', 'en'],
-	['Chinese', 'zh-CN']
+	['中文（简体）', 'zh-CN']
 ]

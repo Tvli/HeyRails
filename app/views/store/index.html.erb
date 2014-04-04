@@ -6,7 +6,7 @@
  <p id="notice"><%= notice %></p>
  <% end %>
 
- <h1>Your Shopping Catalog (Viewed <%= pluralize session[:counter], 'time' %>)</h1>
+ <h1> <%= t('.title_html') %>(<%= t('.viewed') %> <%= pluralize session[:counter], t('.times') %>)</h1>
 
  <% cache ['store', Product.latest] do %>
 
@@ -20,7 +20,7 @@
  						<!-- <span class="price"><%= sprintf("$%0.02f", product.price) %></span>,-->
 	 					
 
-	 						<%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true, class: 'atcbutton' %>
+	 						<%= button_to t('.add_html'), line_items_path(product_id: product), remote: true, class: 'atcbutton' %>
  					</div>
  			</div>
  		<% end %>
