@@ -21,7 +21,7 @@
 
  #banner{
  	/*background: #9c9;*/
- 	background: #006363;
+ 	background: rgba(255,0,0,0.1);
  	padding: 10px;
  	border-bottom: 2px solid;
  	font: small-caps 40px/40px "Comic Sans MS", cursive, sans-serif;
@@ -46,12 +46,13 @@
 
 #columns{
 	/*background: #141;*/
-	background: #006363;
+	background: rgba(100,0,0,0.2);
 
 	#main{
 		margin-left: 30em;
 		padding: 1em;
 		background: white;
+
 	}
 
 	#side{
@@ -59,7 +60,7 @@
 		padding: 1em 2em;
 		width: 26em;
 		/*background: #141;*/
-		background-color: #006363;
+		background-color: rgba(100,0,0,0);
 
 
 		form, div{
@@ -72,7 +73,7 @@
 
 		#cart{
 			font-size: smaller;
-			color:#ff7400;
+			color:#ff9200;
 
 			table{
 				border-top:  1px dotted #ff7400;
@@ -84,7 +85,7 @@
 
 			p{
 				font-size: 20px;
-				color: #ff9240;
+				color: #0b61a4;
 			}
 
 			ul{
@@ -95,7 +96,7 @@
 				margin-bottom: 2px;
 	
 				a{
-					color: #ff7400;
+					color: #0b61a4;
 					font-size: medium;
 				}
 			}
@@ -111,7 +112,7 @@
 
 		legend{
 			color: #ff7400;
-			background: #006363;
+			background: #A9F5D0;
 			font-family: "Comic Sans MS", cursive, sans-serif;
 			padding: 0.2em 1em;
 		}
