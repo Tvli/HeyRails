@@ -85,7 +85,7 @@
 
 			p{
 				font-size: 20px;
-				color: #0b61a4;
+				color: black;
 			}
 
 			ul{
@@ -96,8 +96,8 @@
 				margin-bottom: 2px;
 	
 				a{
-					color: #0b61a4;
-					font-size: medium;
+					/*color: #0b61a4;*/
+					/*font-size: medium;*/
 				}
 			}
 		}
@@ -190,6 +190,22 @@
 .locale{
 	float: right;
 	margin: -0.25em 0.1em;
+}
+
+.link:link,.link:visited{
+	font-size: medium;
+	color: rgba(0,0,0,0.70);
+	display:block;
+	font-weight:bold;
+	text-decoration:none;
+
+}
+
+.link:hover, .link:active
+{
+	background-color:transparent;
+	color:#0b61a4;
+	font-size: 130%;
 }
 
 

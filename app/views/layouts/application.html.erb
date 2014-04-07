@@ -22,22 +22,22 @@
 		<div id="side">
 		<p><%= Time.now.getgm %></p>
 			<ul>
-				<li><%= link_to t('.home'), store_path %></li>
-				<li><a href="http://www.../faq"><%= t('.questions') %></a></li>
-				<li><a href="http://www.../news"><%= t('.news') %></a></li>
-				<li><a href="http://www.../contact"><%= t('.contact') %></a></li>
+				<li><%= link_to t('.home'), store_path, class: 'link' %></li>
+				<li><%= link_to t('.questions'), class: 'link' %></li>
+				<li><%= link_to t('.news'), class: 'link' %></li>
+				<li><%= link_to t('.contact'), class: 'link' %></li>
 				
 			</ul>
 
 			<ul>
-				<li><%= link_to t('.adminLogin'), admin_path %></li>
+				<li><%= link_to t('.adminLogin'), admin_path, class: 'link' %></li>
 			</ul>
 
 			<% if session[:user_id] %>
 				<ul>
-					<li><%= link_to t('.viweOrders'), orders_path %></li>
-					<li><%= link_to t('.manageProducts'), products_path %></li>
-					<li><%= link_to t('.viewUsers'), users_path %></li>
+					<li><%= link_to t('.viweOrders'), orders_path, class: 'link' %></li>
+					<li><%= link_to t('.manageProducts'), products_path, class: 'link' %></li>
+					<li><%= link_to t('.viewUsers'), users_path, class: 'link' %></li>
 				</ul>
 
 				<ul>
